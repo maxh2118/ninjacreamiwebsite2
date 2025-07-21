@@ -1,0 +1,250 @@
+/* style.css (Volledige en correcte versie) */
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+
+:root {
+    --background-color: #FDFBF8; /* Zacht crème */
+    --text-color: #3d3d3d;
+    --primary-color: #8db596; /* Pistachegroen */
+    --secondary-color: #e89f83; /* Zacht oranje/roze */
+    --accent-color: #5c4b51; /* Donkerbruin/paars */
+    --card-background: #FFFFFF;
+    --font-heading: 'Lora', serif;
+    --font-body: 'Open Sans', sans-serif;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--card-background);
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+nav a {
+    font-family: var(--font-heading);
+    color: var(--accent-color);
+    text-decoration: none;
+    margin: 0 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+nav a.active, nav a:hover {
+    color: var(--primary-color);
+}
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    color: var(--accent-color);
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 2rem;
+}
+
+/* Recipe Grid */
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.recipe-card {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    overflow: hidden;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.recipe-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.recipe-card-content {
+    padding: 1.5rem;
+}
+
+.recipe-card-content h3 {
+    margin: 0 0 0.5rem 0;
+    color: var(--accent-color);
+    text-align: left;
+}
+
+/* Recipe Detail Page */
+#recipe-detail-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.recipe-image-hero {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.recipe-meta {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+    color: #777;
+    justify-content: center;
+}
+
+.recipe-meta span {
+    font-weight: 600;
+}
+
+.recipe-body {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 3rem;
+    align-items: flex-start; /* Correct alignment */
+}
+
+.ingredients-list {
+    background: rgba(232, 159, 131, 0.1); /* Zachte transparante achtergrond */
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 1.5rem;
+    border-radius: 8px;
+    position: sticky; /* Dit zorgt voor het 'zwevende' effect */
+    top: 2rem; /* Afstand van de bovenkant */
+}
+
+.ingredients-list h3 {
+    margin-top: 0;
+    text-align: left;
+}
+
+.ingredients-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.ingredients-list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.instructions h3 {
+    text-align: left;
+}
+
+.instructions p {
+    white-space: pre-wrap; /* Behoudt enters en spaties */
+}
+
+.share-button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+}
+
+/* Forms en Filters */
+.filters {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    justify-content: center;
+}
+
+.recipe-form, .text-page {
+    max-width: 700px;
+    margin: 0 auto;
+    background: var(--card-background);
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.recipe-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: var(--font-body);
+    box-sizing: border-box;
+}
+
+button, .button {
+    width: 100%;
+    padding: 1rem;
+    background: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-family: var(--font-heading);
+}
+
+button:hover, .button:hover {
+    background-color: #d18a6f;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+    font-size: 0.9rem;
+    color: #999;
+}
+
+/* Responsive voor mobiel */
+@media (max-width: 768px) {
+    .recipe-body {
+        grid-template-columns: 1fr; /* Ingrediënten en instructies onder elkaar */
+    }
+
+    .ingredients-list {
+        position: static; /* 'Zweven' uitzetten op mobiel */
+    }
+
+    .filters {
+        flex-direction: column;
+    }
+}
