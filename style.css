@@ -248,3 +248,37 @@ footer {
         flex-direction: column;
     }
 }
+/* CSS voor Admin Pagina */
+.admin-section {
+    margin-top: 3rem;
+    border-top: 2px solid #eee;
+    padding-top: 2rem;
+}
+.admin-recipe-card {
+    background: #f9f9f9;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.admin-recipe-card h4 {
+    margin: 0;
+    text-align: left;
+}
+.admin-recipe-card p {
+    margin: 0;
+}
+.admin-recipe-card button {
+    width: auto;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    margin-left: 0.5rem;
+}
+.approve-btn {
+    background-color: var(--primary-color);
+}
+.delete-btn {
+    background-color: #e74c3c; /* Rood */
+}
