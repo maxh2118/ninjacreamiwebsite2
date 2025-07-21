@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ninja Creami Recepten</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="./index.html" class="active">Recepten</a>
+            <a href="./insturen.html">Deel jouw recept</a>
+            <a href="./contact.html">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Ontdek de Lekkerste Ninja Creami Recepten</h1>
+        <div class="filters">
+            <input type="search" id="search-bar" placeholder="Zoek op naam of ingrediënt...">
+            <select id="category-filter">
+                <option value="">Alle Categorieën</option>
+                <option value="Ice Cream">Ice Cream</option>
+                <option value="Sorbet">Sorbet</option>
+                <option value="Milkshake">Milkshake</option>
+                <option value="Proteïne IJs">Proteïne IJs</option>
+                <option value="Vegan">Vegan</option>
+            </select>
+        </div>
+        <div id="recipe-grid" class="recipe-grid">
+            <p>Recepten worden geladen...</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Jouw Naam - Ninja Creami Recepten</p>
+    </footer>
+
+    <script src="./config.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
