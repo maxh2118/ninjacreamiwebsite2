@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deel jouw Recept - Ninja Creami Recepten</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Recepten</a>
+            <a href="insturen.html" class="active">Deel jouw recept</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Deel jouw Lekkerste IJsrecept!</h1>
+        <p>Jouw recept wordt na goedkeuring op de site geplaatst. Bedankt voor het delen!</p>
+        <form id="submission-form" class="recipe-form">
+            <label for="submittedBy">Jouw Naam *</label>
+            <input type="text" id="submittedBy" required>
+
+            <label for="submitterEmail">Jouw E-mailadres (optioneel, wordt niet getoond)</label>
+            <input type="email" id="submitterEmail">
+
+            <label for="title">Titel van het recept *</label>
+            <input type="text" id="title" required>
+
+            <label for="description">Korte omschrijving *</label>
+            <textarea id="description" rows="3" required></textarea>
+
+            <label for="imageUrl">URL van een foto</label>
+            <input type="url" id="imageUrl" placeholder="https://voorbeeld.com/ijs.jpg">
+
+            <label for="category">Categorie *</label>
+            <select id="category" required>
+                <option value="Ice Cream">Ice Cream</option>
+                <option value="Sorbet">Sorbet</option>
+                <option value="Milkshake">Milkshake</option>
+                <option value="Proteïne IJs">Proteïne IJs</option>
+                <option value="Vegan">Vegan</option>
+            </select>
+
+            <label for="prepTime">Bereidingstijd (bv. 5 minuten)</label>
+            <input type="text" id="prepTime">
+
+            <label for="creamiProgram">Ninja Creami Stand</label>
+            <input type="text" id="creamiProgram">
+
+            <label>Ingrediënten (één per regel, bv. "100ml Melk") *</label>
+            <textarea id="ingredients" rows="8" required placeholder="200ml Volle melk&#10;50g Suiker&#10;1tl Vanille-extract"></textarea>
+            
+            <label>Instructies *</label>
+            <textarea id="instructions" rows="10" required></textarea>
+            
+            <div class="cf-turnstile" data-sitekey="1x00000000000000000000AA"></div>
+
+            <button type="submit">Recept Insturen</button>
+        </form>
+        <div id="form-message" style="display:none;"></div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Jouw Naam - Ninja Creami Recepten</p>
+    </footer>
+    
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    <script src="config.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
