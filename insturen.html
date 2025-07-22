@@ -15,22 +15,56 @@
         </nav>
     </header>
     <main>
-        <h1>Deel jouw Lekkerste IJsrecept!</h1>
-        <p>Jouw recept wordt na goedkeuring op de site geplaatst. Bedankt voor het delen!</p>
-        <form id="submission-form" class="recipe-form">
-            <label for="submittedBy">Jouw Naam *</label>
-            <input type="text" id="submittedBy" required>
+        <div class="recipe-form">
+            <h1>Deel jouw Lekkerste IJsrecept!</h1>
+            <p>Jouw recept wordt na goedkeuring op de site geplaatst. Bedankt voor het delen!</p>
+            
+            <form id="submission-form">
+                <label for="submittedBy">Jouw Naam *</label>
+                <input type="text" id="submittedBy" required>
 
-            <label for="submitterEmail">Jouw E-mailadres</label>
-            <small style="display: block; margin-top: -1.2rem; margin-bottom: 1rem; color: #777;">
-                Optioneel, wordt niet getoond op de website. Mochten we vragen hebben over het recept, dan kunnen we via het e-mailadres contact opnemen.
-            </small>
-            <input type="email" id="submitterEmail">
+                <label for="submitterEmail">Jouw E-mailadres</label>
+                <small style="display: block; margin-top: -1.2rem; margin-bottom: 1rem; color: #777;">
+                    Optioneel, wordt niet getoond op de website. Mochten we vragen hebben over het recept, dan kunnen we via het e-mailadres contact opnemen.
+                </small>
+                <input type="email" id="submitterEmail">
 
-            <label for="title">Titel van het recept *</label>
-            <input type="text" id="title" required>
+                <label for="title">Titel van het recept *</label>
+                <input type="text" id="title" required>
+
+                <label for="description">Korte omschrijving *</label>
+                <textarea id="description" rows="3" required></textarea>
+
+                <label for="imageUrl">URL van een foto</label>
+                <input type="url" id="imageUrl" placeholder="https://voorbeeld.com/ijs.jpg">
+
+                <label for="category">Categorie *</label>
+                <select id="category" required>
+                    <option value="Ice Cream">Ice Cream</option>
+                    <option value="Sorbet">Sorbet</option>
+                    <option value="Milkshake">Milkshake</option>
+                    <option value="Proteïne IJs">Proteïne IJs</option>
+                    <option value="Vegan">Vegan</option>
+                </select>
+
+                <label for="prepTime">Bereidingstijd (bv. 5 minuten)</label>
+                <input type="text" id="prepTime">
+
+                <label for="creamiProgram">Ninja Creami Stand</label>
+                <input type="text" id="creamiProgram">
+
+                <label>Ingrediënten (één per regel, bv. "100ml Melk") *</label>
+                <textarea id="ingredients" rows="8" required placeholder="200ml Volle melk&#10;50g Suiker&#10;1tl Vanille-extract"></textarea>
+                
+                <label>Instructies *</label>
+                <textarea id="instructions" rows="10" required></textarea>
+                
+                <div class="cf-turnstile" data-sitekey="1x00000000000000000000AA"></div>
+
+                <button type="submit">Recept Insturen</button>
             </form>
-        <div id="form-message" style="display:none;"></div>
+            <div id="form-message" style="display:none;"></div>
+        </div>
     </main>
     <footer>
         <p>&copy; 2025 Jouw Naam - Ninja Creami Recepten</p>
