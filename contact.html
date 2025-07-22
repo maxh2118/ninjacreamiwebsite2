@@ -16,11 +16,27 @@
     </header>
     <main class="text-page">
         <h1>Contact</h1>
-        <p>Heb je een vraag, opmerking of suggestie? Stuur me gerust een berichtje!</p>
-        <a href="mailto:ninjacreamireceptenonline@gmail.com" class="button">Stuur een e-mail</a>
+        <p>Heb je een vraag, opmerking of suggestie? Vul het formulier in en ik neem zo snel mogelijk contact op.</p>
+        
+        <form id="contact-form">
+            <label for="name">Naam</label>
+            <input type="text" id="contact-name" required>
+            
+            <label for="email">E-mailadres</label>
+            <input type="email" id="contact-email" required>
+            
+            <label for="message">Bericht</label>
+            <textarea id="contact-message" rows="6" required></textarea>
+            
+            <button type="submit">Verstuur Bericht</button>
+        </form>
+        <div id="form-message" style="margin-top: 1rem;"></div>
     </main>
     <footer>
         <p>&copy; 2025 Jouw Naam - Ninja Creami Recepten</p>
     </footer>
+
+    <script src="./config.js"></script>
+    <script src="./main.js"></script>
 </body>
 </html>
