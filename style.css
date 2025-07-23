@@ -1,4 +1,4 @@
-/* style.css (Volledige versie met header/logo fix) */
+/* style.css (Volledige versie met groter logo en gecentreerd menu) */
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
 
 :root {
@@ -26,9 +26,7 @@ header {
     padding: 0.5rem 2rem;
     border-bottom: 1px solid #eee;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    /* Flexbox voor een moderne layout */
     display: flex;
-    justify-content: space-between; /* Plaatst logo links en nav rechts */
     align-items: center; /* Lijn alles verticaal in het midden uit */
 }
 
@@ -39,15 +37,21 @@ header {
 
 /* De daadwerkelijke logo-afbeelding */
 .logo-image {
-    max-height: 50px; /* <-- Pas dit getal aan voor de gewenste grootte */
-    width: auto;      /* Zorgt dat de verhoudingen kloppen */
+    max-height: 110px; /* <-- AANGEPAST NAAR 110px */
+    width: auto;
+}
+
+/* Navigatie vult de resterende ruimte en centreert de inhoud */
+nav {
+    flex-grow: 1;
+    text-align: center;
 }
 
 nav a {
     font-family: var(--font-heading);
     color: var(--accent-color);
     text-decoration: none;
-    margin: 0 0 0 1.5rem; /* Margin alleen aan de linkerkant voor ruimte */
+    margin: 0 1.5rem; /* Ruimte aan beide kanten van de knoppen */
     font-size: 1.2rem;
     font-weight: 700;
 }
