@@ -103,6 +103,7 @@ async function fetchAllAdminRecipes() {
     }
 }
 
+// In admin.js, vervang alleen deze functie:
 function createAdminCard(recipe) {
     const card = document.createElement('div');
     card.className = 'admin-recipe-card';
@@ -112,14 +113,9 @@ function createAdminCard(recipe) {
             <p><em>Categorie: ${recipe.category} | Status: ${recipe.status}</em></p>
         </div>
         <div>
-            ${recipe.status === 'pending' ? `<button class="approve-btn" data-id="${recipe.id}">Goedkeuren</button>` : ''}
-            <button class="delete-btn" data-id="${recipe.id}">Verwijderen</button>
+            <a href="./edit.html?id=${recipe.id}" class="button" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Bewerken / Inzien</a>
         </div>
     `;
-    if (recipe.status === 'pending') {
-        card.querySelector('.approve-btn').addEventListener('click', () => adminAction('admin-approve', recipe.id));
-    }
-    card.querySelector('.delete-btn').addEventListener('click', () => adminAction('admin-delete', recipe.id));
     return card;
 }
 
