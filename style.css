@@ -1,4 +1,4 @@
-/* style.css (Volledige en correcte versie) */
+/* style.css (Volledige versie met header/logo fix) */
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
 
 :root {
@@ -20,22 +20,39 @@ body {
     line-height: 1.6;
 }
 
+/* --- VERNIEUWDE HEADER SECTIE --- */
 header {
     background-color: var(--card-background);
-    padding: 1rem 2rem;
+    padding: 0.5rem 2rem;
     border-bottom: 1px solid #eee;
-    text-align: center;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    /* Flexbox voor een moderne layout */
+    display: flex;
+    justify-content: space-between; /* Plaatst logo links en nav rechts */
+    align-items: center; /* Lijn alles verticaal in het midden uit */
+}
+
+/* De link rond het logo */
+.logo-link {
+    display: inline-block;
+}
+
+/* De daadwerkelijke logo-afbeelding */
+.logo-image {
+    max-height: 50px; /* <-- Pas dit getal aan voor de gewenste grootte */
+    width: auto;      /* Zorgt dat de verhoudingen kloppen */
 }
 
 nav a {
     font-family: var(--font-heading);
     color: var(--accent-color);
     text-decoration: none;
-    margin: 0 1.5rem;
+    margin: 0 0 0 1.5rem; /* Margin alleen aan de linkerkant voor ruimte */
     font-size: 1.2rem;
     font-weight: 700;
 }
+/* --- EINDE VERNIEUWDE HEADER SECTIE --- */
+
 
 nav a.active, nav a:hover {
     color: var(--primary-color);
@@ -236,6 +253,11 @@ footer {
 
 /* Responsive voor mobiel */
 @media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Plaats logo boven menu op kleine schermen */
+        gap: 0.5rem;
+    }
+
     .recipe-body {
         grid-template-columns: 1fr; /* Ingrediënten en instructies onder elkaar */
     }
@@ -270,7 +292,7 @@ footer {
 .admin-recipe-card p {
     margin: 0;
 }
-.admin-recipe-card button {
+.admin-recipe-card button, .admin-recipe-card .button {
     width: auto;
     padding: 0.5rem 1rem;
     font-size: 0.9rem;
